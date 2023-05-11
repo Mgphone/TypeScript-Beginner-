@@ -23,13 +23,13 @@ const add=(a:number,b:number):number=>{
   return a+b
 }
 
-const losgMsg=(message:any):void=>{
+const logMsg=(message:any):void=>{
   console.log(message);
   
 }
 
-losgMsg('Hello')
-losgMsg(add(2,3))
+logMsg('Hello')
+logMsg(add(2,3))
 
 // let subtract=function(c:number,d:number):number{
 //   return c-d
@@ -44,7 +44,7 @@ type mathFunction=(a:number,b:number)=>number
 let multiply:mathFunction=function(c,d){
   return c*d
 }
-losgMsg(multiply(2,2))
+logMsg(multiply(2,2))
 
 // optional parameters
 const addAll=(a:number,b:number,c?:number):number=>{
@@ -57,15 +57,15 @@ const addAll=(a:number,b:number,c?:number):number=>{
 const sumAll=(a:number=10,b:number,c:number=3):number=>{
   return a+b+c
 }
-losgMsg((addAll(2,3)))
+logMsg((addAll(2,3)))
 // console.log(addAll(3,4,5))
-losgMsg((sumAll(undefined,3)))
+logMsg((sumAll(undefined,3)))
 
 //Rest Parameters
 const total=(a:number, ...nums:number[]):number=>{
   return a+nums.reduce((prev,curr)=> prev +curr )
 }
-losgMsg(total(10,2,3))
+logMsg(total(10,2,3))
 
 const createError=(errMsg:string):never=>{
   throw new Error(errMsg);
